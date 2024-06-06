@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class Category extends StatelessWidget {
-  Category(
-      {super.key,
-      required this.text,
-      required this.color,
-      required this.onTap});
-  String text;
-  Color color;
-  Function() onTap;
+  const Category({
+    super.key,
+    required this.text,
+    required this.color,
+    required this.onTap,
+  });
+
+  final String text;
+  final Color color;
+  final Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class Category extends StatelessWidget {
           left: 24,
         ),
         alignment: Alignment.centerLeft,
-        height: 65,
+        height: MediaQuery.of(context).size.height * 0.08,
         width: double.infinity,
         color: color,
         child: Text(
