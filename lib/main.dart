@@ -15,9 +15,13 @@ class TokuApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Language Learing',
       theme: ThemeData.light().copyWith(
-        colorScheme: const ColorScheme.dark(),
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xff46322B),
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xff46322B),
+        ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: const Color(0xff46322B),
+          elevation: 8,
+          shadowColor: Colors.black.withOpacity(0.8),
           centerTitle: true,
         ),
         textTheme: const TextTheme(
